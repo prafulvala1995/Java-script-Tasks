@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.coler{
+    background-color: rgb(97, 115, 148);
+    color: white;
+    height:950px;
+}
+.center{
+    text-align: center;
+}
+.margin{
+    margin-top: 20px;
+}

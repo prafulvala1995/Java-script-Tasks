@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <div style="text-align: center; padding-top: 30px; letter-spacing: 0.2cap;">
+        <h2>Data Of Array</h2>
+        <button onclick="myData()">Uppercase </button>
+        <button onclick="myDatanew()">Lowercase </button>
+        <p id="array1"></p><br>
+        <p id="upArray"></p>
+        <p id="loArray"></p>
+    </div>
+    
+    <script>
+
+        const MyArray = [ 'p', 'e', 'F', 'h', 'V', 'N', 'a', 's', 'L' ,'z', 'X', 'E', 'O', 'j', 'g', 'd' ];
+        let upArray = [];
+        let loArray = [];
+
+        function displayArrays() {
+            document.getElementById('array1').innerHTML = `Array1 :- ${MyArray} `;
+            document.getElementById('upArray').innerHTML = `Uppercase Array :- ${upArray}`;
+            document.getElementById('loArray').innerHTML = `Lowercase Array :- ${loArray}`;
+        }
+
+        function myData () {
+            upArray = MyArray.filter(letter => letter === letter.toUpperCase());
+            displayArrays();
+        }
+    
+        function myDatanew () {
+            loArray = MyArray.filter(letter => letter === letter.toLowerCase());
+            displayArrays();
+        }
+
+        displayArrays();
+
+    </script>
+</body>
+</html>

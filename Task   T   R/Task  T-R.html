@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Click 5</title>
+  </head>
+  <body>
+    <div style="text-align: center; padding-top: 30px">
+      <h2>Button Click</h2>
+      <button type="button" onClick="btClick('T')">---- T ----</button>
+      <button type="button" onClick="btClick('R')">---- R ----</button><br></br>
+
+      <table id="dataShow" align="center"></table>
+    
+    </div>
+    <script>
+
+    var mainArray = [];
+    //   console.log("mainArray ->", mainArray);
+      
+    function btClick(type) {
+        if ( mainArray.length === 0 || mainArray[mainArray.length - 1][0] !== type)
+        {
+          mainArray.push([type]);
+        } else {
+          mainArray[mainArray.length - 1].push(type);
+        } 
+        console.log("mainArray ==>", mainArray);
+        displayary();
+    }
+
+    
+    // function displayary() {
+
+    //     var result = mainArray
+    //       .map((array) => `${array}`)
+    //       .join("</br>");
+          
+    //     document.getElementById("dataShow").innerHTML = result + "</br>";
+    // }
+    
+
+    function displayary() {
+
+        var table = document.getElementById("dataShow");
+        table.innerHTML = "";
+
+        var subAryLenth = mainArray.reduce( (max, subArray) => Math.max(max, subArray.length), 0 );
+
+        for (var i = 0; i < subAryLenth; i++) {
+          var row = table.insertRow();
+          mainArray.forEach((subArray) => {
+            var cell = row.insertCell();
+            cell.innerHTML = subArray[i] || "";
+          });
+        }
+      }
+
+
+    </script>
+  </body>
+</html>

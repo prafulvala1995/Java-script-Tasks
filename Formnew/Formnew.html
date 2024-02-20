@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Crud Form</title>
+    <link rel="stylesheet" href="/Formnew/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="coler">
+    <div class="container">
+        <h2 class="center">Form</h2>
+        <div class="row">
+        
+        <form id="userForm" class="margin"> 
+            <div class="col-md-6 form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" id="age" name="age">
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="address">Address:</label>
+                <input type="text" class="form-control" id="address" name="address">
+            </div>
+            <div class="col-md-12">
+                <button type="button" class="btn btn-success" id="addButton" onclick="addData()">Add Data</button>
+                <!-- <button type="button" class="btn btn-primary" id="updateButton" onclick="addData()">Update Data</button> -->
+            </div>
+            
+        </form>
+        
+        </div>
+        <hr>
+        <h2 class="center">User List</h2>
+        <div class="row margin">
+            <div class="col-12">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Address</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userList">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="/Formnew/Scriptn.js"></script>
+</body>
+</html>
